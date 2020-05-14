@@ -9,7 +9,7 @@ public class Deque<Item> implements Iterable<Item> {
 
     // construct an empty deque
     public Deque() {
-        this.N = 0;
+        N = 0;
     }
 
 
@@ -115,6 +115,7 @@ public class Deque<Item> implements Iterable<Item> {
 
     @Override
     public String toString() {
+
         StringBuilder sb = new StringBuilder();
         for (Node x = first; x != null; x = x.next) {
             sb.append(x.item).append(" ");
@@ -126,24 +127,19 @@ public class Deque<Item> implements Iterable<Item> {
 
     public static void main(String[] args) {
 
-        Deque<Integer> myDeque = new Deque<>();
-        myDeque.addLast(3);
-        myDeque.addLast(6);
-        myDeque.addFirst(3);
-        myDeque.addLast(6);
-        myDeque.addLast(7);
-        myDeque.addFirst(7);
-        myDeque.removeLast();
-        myDeque.removeLast();
-        myDeque.removeLast();
-        myDeque.removeLast();
-        myDeque.removeLast();
+        Deque<Double> myDeque = new Deque<>();
+        myDeque.addFirst(36.7);
+        myDeque.addLast(37.7);
+        myDeque.addFirst(37.7);
         myDeque.removeFirst();
+        myDeque.removeLast();
         System.out.println(myDeque);
         System.out.println(myDeque.size());
         System.out.println(myDeque.isEmpty());
-        myDeque.addFirst(3);
-        System.out.println(myDeque);
+        myDeque.removeFirst();
+
+
+        System.out.println(myDeque.size());
         System.out.println(myDeque.isEmpty());
     }
 
